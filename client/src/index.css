@@ -10,6 +10,8 @@
   display: none;
 }
 html, body, #root {
-  background: url(/assets/bgImage.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   object-fit: contain;
 }
