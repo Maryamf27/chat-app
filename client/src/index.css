@@ -9,3 +9,7 @@
 ::-webkit-scrollbar{
   display: none;
 }
+html, body, #root {
+  background: url(./src/assets/bgImage.svg);
+  object-fit: contain;
+}
