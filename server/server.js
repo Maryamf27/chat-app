@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import "dotenv/config";
 import http from "http";
+import mongoose from "mongoose";
 import { connectDB } from "./lib/db.js";
 import userRouter from "./routes/userRoutes.js";
 import messageRouter from "./routes/messageRoutes.js";
@@ -48,7 +49,7 @@ app.use("/api/auth", userRouter)
 app.use('/api/status', (req, res) => { 
     res.json({ 
         status: "Server is Live!",
-        mongoDBConnected: require("mongoose").connection.readyState === 1
+        mongoDBConnected: mongoose.connection.readyState === 1
     });
 });
 app.use('/api/messages', messageRouter);
